@@ -1,6 +1,8 @@
-.PHONY: clean package
+.PHONY: default clean package
 
 VERSION=${shell jq -r .version < src/manifest.json}
+
+default: package
 
 clean:
 	rm -rf build/
